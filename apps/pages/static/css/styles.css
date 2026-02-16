@@ -1,0 +1,59 @@
+:root {
+  --medieval-gold: #c5a059;
+  --medieval-crimson: #7b1113;
+  --parchment: #f4e4bc;
+  --stone-dark: #2c2c2c;
+}
+
+body {
+  background-color: #1a1a1a;
+  /* Dark background behind the container */
+  font-family: 'Quattrocento', serif;
+  color: var(--stone-dark);
+}
+
+/* Gothic Header Font */
+.navbar-brand,
+h1,
+h2,
+h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--medieval-gold) !important;
+}
+
+.medieval-nav {
+  background-color: var(--stone-dark) !important;
+  border-bottom: 3px solid var(--medieval-gold);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* The "Parchment" Content Area */
+main.container {
+  background-color: var(--parchment);
+  background-image: url('https://www.transparenttextures.com');
+  padding: 40px;
+  border: 15px solid transparent;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org' width='75' height='75'%3E%3Cpath d='M0 0h75v75H0z' fill='%237b1113'/%3E%3C/svg%3E")
+    30 round;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  margin-top: 100px !important;
+  margin-bottom: 50px !important;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: var(--medieval-crimson);
+  border-color: var(--medieval-gold);
+  font-family: 'Cinzel', serif;
+}
+
+.btn-primary:hover {
+  background-color: #5a0c0e;
+  border-color: #fff;
+}
+
+.footer {
+  background-color: var(--stone-dark);
+  color: var(--medieval-gold);
+  border-top: 2px solid var(--medieval-gold);
+}

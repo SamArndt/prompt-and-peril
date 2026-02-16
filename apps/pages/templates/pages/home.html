@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Home | Prompt & Peril{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+  <h1 class="display-3 mb-4">Welcome to Prompt & Peril</h1>
+  <p class="lead mb-5 fs-4">
+    An AI-driven tabletop experience where the story is infinite,
+    but the rules are absolute.
+  </p>
+
+  <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mb-5">
+    {% if is.authenticated %}
+    <a href="#" class="btn btn-primary btn-lg px-4 gap-3">Begin New Quest</a>
+    {% endif %}
+    <a href="https://open5e.com" target="_blank" class="btn btn-outline-dark btn-lg px-4">Consult the Rulebook</a>
+  </div>
+</div>
+
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+  <!-- The Brain -->
+  <div class="feature col text-center">
+    <h3 class="fs-4">The Brain</h3>
+    <p>Powered by ChatGPT. A dynamic Dungeon Master that reacts to your every choice with narrative depth and
+      consequence.</p>
+  </div>
+
+  <!-- The Rulebook -->
+  <div class="feature col text-center">
+    <h3 class="fs-4">The Rulebook</h3>
+    <p>Validated by the <a href="https://open5e.com" class="text-decoration-none text-danger">Open5e API</a>. Real
+      stats, real monsters, and balanced combat mechanics.</p>
+  </div>
+
+  <!-- The Memory -->
+  <div class="feature col text-center">
+    <h3 class="fs-4">The Memory</h3>
+    <p>A persistent world. Your inventory, health, and past deeds are etched into our database, ensuring your legend
+      never fades.</p>
+  </div>
+</div>
+
+<div class="mt-5 p-4 border border-dark rounded bg-light bg-opacity-50 italic text-center">
+  <p class="mb-0"><em>"The tavern fire flickers as you step inside. A hooded figure beckons you toward a corner table...
+      the journey begins with a single prompt."</em></p>
+</div>
+{% endblock %}
