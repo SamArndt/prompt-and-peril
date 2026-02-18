@@ -40,9 +40,13 @@
 
             <!-- Kept as a primary button -->
             <a href="#" class="btn btn-primary px-3">Begin Quest</a>
+            <form action="{% url 'accounts:logout' %}" method="post">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-primary me-3">Logout</button>
+            </form>
             {% else %}
             <!-- Replaced hardcoded 'login' with url tag for stability -->
-            <a href="{% url 'login' %}" class="btn btn-outline-light px-4">Login</a>
+            <a href="/login" class="btn btn-outline-light px-4">Login</a>
             {% endif %}
           </div>
         </div>

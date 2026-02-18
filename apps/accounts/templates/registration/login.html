@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %}Login{% endblock %}
+
 {% block content %}
 <!-- Using the same container shadow-lg style from your base.html -->
 <div class="d-flex justify-content-center align-items-center min-vh-75 mt-5">
@@ -13,7 +15,7 @@
 
       <div class="mb-3 text-start">
         <!-- Django form fields rendered with Bootstrap-friendly spacing -->
-        {{ form.as_p }}
+        {{ form }}
       </div>
 
       <div class="my-3">
