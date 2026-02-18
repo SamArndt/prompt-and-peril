@@ -39,7 +39,6 @@
             <span class="text-light small me-2">Hail, {{ user.username }}</span>
 
             <!-- Kept as a primary button -->
-            <a href="#" class="btn btn-primary px-3">Begin Quest</a>
             <form action="{% url 'accounts:logout' %}" method="post">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary me-3">Logout</button>
