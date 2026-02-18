@@ -1,0 +1,9 @@
+<h1>Please sign in</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form }}
+
+    <div class="my-3">
+      <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    </div>
+  </form>
