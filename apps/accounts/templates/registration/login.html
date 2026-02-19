@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<!-- Using the same container shadow-lg style from your base.html -->
+<div class="d-flex justify-content-center align-items-center min-vh-75 mt-5">
+  <div class="container shadow-lg p-5 bg-dark text-light border border-secondary"
+    style="max-width: 500px; border-radius: 0.5rem;">
+
+    <h1 class="text-center mb-4">Please Sign In</h1>
+
+    <form method="post">
+      {% csrf_token %}
+
+      <div class="mb-3 text-start">
+        <!-- Django form fields rendered with Bootstrap-friendly spacing -->
+        {{ form }}
+      </div>
+
+      <div class="my-3">
+        <!-- The Maroon Button: Uses your requested color with Bootstrap's w-100 -->
+        <button class="btn btn-primary w-100 py-3 fs-5" style="background-color: #800000; border-color: #4a0000;"
+          type="submit">
+          Enter the Realm
+        </button>
+      </div>
+    </form>
+
+    <div class="mt-4 text-center">
+      <span class="small text-secondary">
+        New to the party? <a href="#" class="text-info text-decoration-none">Join the Guild</a>
+      </span>
+    </div>
+  </div>
+</div>
+{% endblock %}
