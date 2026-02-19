@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Enter the Guild{% endblock %}
+
+{% block content %}
+<div class="medieval-container d-flex align-items-center justify-content-center min-vh-100">
+  <div class="parchment-scroll shadow-lg">
+    <div class="wax-seal"></div>
+    <h1 class="medieval-title">Seek Enrollment</h1>
+    <p class="medieval-subtitle">Pledge thy soul to the Guild</p>
+
+    <form method="post" class="medieval-form">
+      {% csrf_token %}
+      {{ form }}
+
+      <button class="btn-medieval" type="submit">
+        Sign the Ledger
+      </button>
+    </form>
+
+    <div class="footer-links mt-4">
+      <p>Already a member of the Guild? <a href="{% url 'accounts:login' %}">Sign In Here</a></p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

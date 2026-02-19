@@ -1,18 +1,22 @@
+@import url('https://fonts.googleapis.com');
+
 :root {
   --medieval-gold: #c5a059;
   --medieval-crimson: #7b1113;
   --parchment: #f4e4bc;
   --stone-dark: #2c2c2c;
+  --iron: #2c2c2c;
+  --blood: #8b0000;
+  --gold: #d4af37;
 }
 
 body {
-  background-color: #1a1a1a;
-  /* Dark background behind the container */
+  background: #1a1a1a;
   font-family: 'Quattrocento', serif;
   color: var(--stone-dark);
+  margin: 0;
 }
 
-/* Gothic Header Font */
 .navbar-brand,
 h1,
 h2,
@@ -27,10 +31,8 @@ h3 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* The "Parchment" Content Area */
 main.container {
   background-color: var(--parchment);
-  background-image: url('https://www.transparenttextures.com');
   padding: 40px;
   border: 15px solid transparent;
   border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org' width='75' height='75'%3E%3Cpath d='M0 0h75v75H0z' fill='%237b1113'/%3E%3C/svg%3E")
@@ -39,6 +41,63 @@ main.container {
   margin-top: 100px !important;
   margin-bottom: 50px !important;
   border-radius: 5px;
+}
+
+.parchment-scroll {
+  background-color: var(--parchment);
+  padding: 3rem;
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+  border: 10px solid #5a3e2b;
+  box-shadow:
+    0 0 50px rgba(0, 0, 0, 0.8),
+    inset 0 0 100px rgba(0, 0, 0, 0.1);
+  font-family: 'Almendra', serif;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+.medieval-title {
+  font-family: 'MedievalSharp', cursive;
+  color: var(--iron);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid var(--iron);
+  margin-bottom: 0.5rem;
+}
+
+.medieval-subtitle {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.wax-seal {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 60px;
+  height: 60px;
+  background: var(--blood);
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  border: 2px solid #600;
+  z-index: 10;
+}
+
+input,
+select {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--iron) !important;
+  border-radius: 0 !important;
+  font-family: 'Almendra', serif;
+  font-size: 1.2rem !important;
+  color: #333 !important;
+  margin-bottom: 1.5rem;
 }
 
 .btn-primary {
@@ -52,8 +111,27 @@ main.container {
   border-color: #fff;
 }
 
+.btn-medieval {
+  background: var(--iron);
+  color: var(--gold);
+  width: 100%;
+  padding: 1rem;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 1.2rem;
+  border: 2px solid var(--gold);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-medieval:hover {
+  background: var(--blood);
+  color: white;
+  box-shadow: 0 0 15px var(--blood);
+}
+
 .footer {
   background-color: var(--stone-dark);
   color: var(--medieval-gold);
   border-top: 2px solid var(--medieval-gold);
+  padding: 20px 0;
 }

@@ -3,34 +3,28 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-<!-- Using the same container shadow-lg style from your base.html -->
-<div class="d-flex justify-content-center align-items-center min-vh-75 mt-5">
-  <div class="container shadow-lg p-5 bg-dark text-light border border-secondary"
-    style="max-width: 500px; border-radius: 0.5rem;">
+<div class="medieval-container d-flex align-items-center justify-content-center min-vh-100">
+  <div class="parchment-scroll shadow-lg">
+    <div class="wax-seal"></div>
 
-    <h1 class="text-center mb-4">Please Sign In</h1>
+    <h1 class="medieval-title text-center">Please Sign In</h1>
+    <p class="medieval-subtitle">Return to the Keep</p>
 
     <form method="post">
       {% csrf_token %}
+      {{ form }}
 
-      <div class="mb-3 text-start">
-        <!-- Django form fields rendered with Bootstrap-friendly spacing -->
-        {{ form }}
-      </div>
-
-      <div class="my-3">
-        <!-- The Maroon Button: Uses your requested color with Bootstrap's w-100 -->
-        <button class="btn btn-primary w-100 py-3 fs-5" style="background-color: #800000; border-color: #4a0000;"
-          type="submit">
-          Enter the Realm
-        </button>
-      </div>
+      <button class="mt-3 btn-medieval" type="submit">
+        Enter the Realm
+      </button>
     </form>
 
     <div class="mt-4 text-center">
-      <span class="small text-secondary">
-        New to the party? <a href="#" class="text-info text-decoration-none">Join the Guild</a>
-      </span>
+      <span class="text-muted">New to the party?</span>
+      <br>
+      <a href="{% url 'accounts:signup' %}" class="text-decoration-none fw-bold" style="color: var(--blood);">
+        Join the Guild
+      </a>
     </div>
   </div>
 </div>
