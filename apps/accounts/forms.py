@@ -1,5 +1,7 @@
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from .models import User
 
 class LoginForm(AuthenticationForm):
   def __init__(self, *args, **kwargs):
@@ -13,3 +15,12 @@ class SignUpForm(UserCreationForm):
     for field_name, field in self.fields.items():
       field.widget.attrs['class'] = 'form-control my-2'
 
+class CustomUserCreationForm(UserCreationForm):
+  class Meta(UserCreationForm.Meta):
+    model = User
+    fields = ('email',)
+
+class CustomUserChangeForm(UserChangeForm):
+  class Meta(UserChangeForm.Meta):
+    model = User
+    fields = ('email',)
