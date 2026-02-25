@@ -35,8 +35,6 @@
           <!-- Added 'gap-3' to spread out the children of this div -->
           <div class="d-flex align-items-center gap-3">
             {% if user.is_authenticated %}
-            <!-- Added 'me-2' to push the name slightly away from buttons -->
-            <span class="text-light small me-2">Hail, {{ user.username }}</span>
 
             <!-- Kept as a primary button -->
             <form action="{% url 'accounts:logout' %}" method="post">
