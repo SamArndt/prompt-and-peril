@@ -20,6 +20,8 @@
     </form>
 
     <div class="mt-4 text-center">
+      <div><a href="{% url 'accounts:password_reset' %}" class="text-decoration-none fw-bold"
+          style="color: var(--iron);">Forgot your password?</a></div>
       <span class="text-muted">New to the party?</span>
       <br>
       <a href="{% url 'accounts:signup' %}" class="text-decoration-none fw-bold" style="color: var(--blood);">
